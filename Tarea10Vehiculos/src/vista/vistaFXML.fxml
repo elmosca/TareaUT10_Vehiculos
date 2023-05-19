@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControllerFXML">
+    <VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+        <HBox />
+        <HBox />
+        <HBox />
+    </VBox>
+    <ComboBox fx:id="combustibleComboBox" layoutX="202.0" layoutY="264.0" prefHeight="25.0" prefWidth="140.0" promptText="Tipo combustible" />
+    <RadioButton fx:id="industrialRadioButton" layoutX="198.0" layoutY="121.0" text="Industrial">
+      <toggleGroup>
+         <ToggleGroup fx:id="vehiculoGroup" />
+      </toggleGroup></RadioButton>
+    <RadioButton fx:id="motoRadioButton" layoutX="198.0" layoutY="88.0" text="Moto" toggleGroup="$vehiculoGroup" />
+    <RadioButton fx:id="turismoRadioButton" layoutX="198.0" layoutY="53.0" text="Turismo" toggleGroup="$vehiculoGroup" />
+    <ListView fx:id="vehiculosListView" layoutX="367.0" layoutY="0.0" prefHeight="296.0" prefWidth="340.0" />
+    <Label fx:id="lbTipoDeVehiculo" layoutX="202.0" layoutY="23.0" text="TIPO DE VEHÍCULO" />
+   <TextField fx:id="tfmarca" layoutX="14.0" layoutY="47.0" promptText="Marca" />
+   <TextField fx:id="tfmodelo" layoutX="14.0" layoutY="87.0" promptText="Modelo" />
+   <TextField fx:id="tfpotencia" layoutX="14.0" layoutY="131.0" promptText="Potencia" />
+   <TextField fx:id="tfkm" layoutX="14.0" layoutY="169.0" promptText="Km" />
+   <TextField fx:id="tfano" layoutX="14.0" layoutY="206.0" promptText="Año" />
+   <TextField fx:id="tfmedidas" layoutX="14.0" layoutY="245.0" promptText="medidas" />
+   <TextField fx:id="tfprecio" layoutX="14.0" layoutY="391.0" promptText="Precio" />
+   <Label fx:id="lbmarca" layoutX="54.0" layoutY="21.0" text="VEHÍCULO" />
+   <Button fx:id="btteliminarvehiculo" layoutX="527.0" layoutY="314.0" mnemonicParsing="false" text="Eliminar vehiculo" />
+   <Button fx:id="bttagregarvehiculo" layoutX="400.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleAgregarVehiculo" text="Agregar vehiculo" />
+   <TextField fx:id="tfnumruedas" layoutX="14.0" layoutY="289.0" promptText="Numero de ruedas" />
+   <TextField fx:id="tftamanocaja" layoutX="14.0" layoutY="342.0" promptText="Tamaño de la caja" />
+   <VBox fx:id="turismoVBox" layoutX="203.0" layoutY="302.0" prefHeight="79.0" prefWidth="100.0">
+       <ComboBox id="tipocarroceriaCombobox" fx:id="carroceriaComboBox" layoutX="0.0" layoutY="0.0" prefHeight="25.0" prefWidth="140.0" promptText="Carroceria" />
+   </VBox>
+   <VBox fx:id="motoVBox" layoutX="203.0" layoutY="382.0" prefHeight="79.0" prefWidth="100.0" visible="false">
+       <!--Agregar aquí las características específicas para la subclase Moto-->
+   </VBox>
+   <VBox fx:id="industrialVBox" layoutX="203.0" layoutY="462.0" prefHeight="79.0" prefWidth="100.0" visible="false">
+       <!--Agregar aquí las características específicas para la subclase Industrial-->
+   </VBox>
+   </AnchorPane>
